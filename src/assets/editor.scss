@@ -1,0 +1,57 @@
+textarea {
+  font-size: 16px;
+  // font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  word-break: break-all;
+}
+
+.marked {
+  * {
+    font-family: 'NanumBarunGothic', sans-serif;
+    word-break: keep-all;
+  }
+  // h1 {
+  //   font-size: 48px;
+  //   font-weight: bold;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: 1.13;
+  //   letter-spacing: normal;
+  // }
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+  }
+  h2 {
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.23;
+    letter-spacing: normal;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.27;
+    letter-spacing: normal;
+  }
+  
+  p {
+    font-size: 16px;
+    // font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+  }
+}

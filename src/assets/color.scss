@@ -1,0 +1,44 @@
+// 이 파일은 color.json을 원본으로 하여 util/jsonColorToScss.js를 통해 생성되었음. 임의 수정 금지
+:root {// # COLOR// ## COLOR > BRAND COLOR
+  --color-brand-white: #ffffff;
+  --color-brand-lightgray: #979797;
+  --color-brand-darkgray: #343434;
+  --color-brand-orange: #ff5b1a;
+  --color-brand-red: #f94a14;
+  // ## COLOR > UI COLOR
+  // ## COLOR > UI COLOR > primary
+  --color-ui-primary-orange: #ff5b1a;
+  --color-ui-primary-darkgray: #343434;
+  --color-ui-primary-lightgray: #979797;
+  // ## COLOR > UI COLOR > point
+  --color-ui-point-purple: #9447ed;
+  --color-ui-point-blue: #647BFF;
+  --color-ui-point-sky: #97e5ef;
+  --color-ui-point-green: #1ebf6d;
+  --color-ui-point-yellowgreen: #b6eb7a;
+  // ## COLOR > UI COLOR > accessibility
+  --color-ui-accessibility-error: #f94a14;
+  --color-ui-accessibility-success: #7cdd40;
+  --color-ui-accessibility-warning: #ffbe14;
+  // ## COLOR > UI COLOR > grayscale
+  --color-ui-grayscale-white: #ffffff;
+  --color-ui-grayscale-gray-100: #f6f6f6;
+  --color-ui-grayscale-gray-200: #eeeeee;
+  --color-ui-grayscale-gray-300: #d8d8d8;
+  --color-ui-grayscale-gray-400: #bababa;
+  --color-ui-grayscale-gray-500: #979797;
+  --color-ui-grayscale-gray-600: #707070;
+  --color-ui-grayscale-gray-700: #555555;
+  --color-ui-grayscale-gray-800: #343434;
+  --color-ui-grayscale-black: #000000;
+  // ## COLOR > UI COLOR > orangescale
+  --color-ui-orangescale-orange-100: #fff3ef;
+  --color-ui-orangescale-orange-200: #ffe8de;
+  --color-ui-orangescale-orange-300: #ffd0bd;
+  --color-ui-orangescale-orange-400: #ffb99d;
+  --color-ui-orangescale-orange-500: #ffa17c;
+  --color-ui-orangescale-orange-600: #ff8a5b;
+  --color-ui-orangescale-orange-700: #ff723a;
+  --color-ui-orangescale-orange-800: #ff5b1a;
+  --color-ui-orangescale-orange-900: #f04400;
+  }
