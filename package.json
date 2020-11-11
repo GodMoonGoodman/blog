@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy": "deploy-aws-s3-cloudfront --bucket blog.inpock.co.kr --delete --source ./dist"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
+    "highlight.js": "^10.3.2",
     "lodash": "^4.17.20",
     "marked": "^1.2.3",
     "popper.js": "^1.16.1",
@@ -22,6 +24,7 @@
     "@vue/cli-plugin-babel": "^4.5.0",
     "@vue/cli-plugin-pwa": "^4.5.0",
     "@vue/cli-service": "^4.5.0",
+    "deploy-aws-s3-cloudfront": "^3.2.4",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"

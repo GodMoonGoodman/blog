@@ -1,6 +1,5 @@
 textarea {
   font-size: 16px;
-  // font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.5;
@@ -13,45 +12,92 @@ textarea {
     font-family: 'NanumBarunGothic', sans-serif;
     word-break: keep-all;
   }
-  // h1 {
-  //   font-size: 48px;
-  //   font-weight: bold;
-  //   font-stretch: normal;
-  //   font-style: normal;
-  //   line-height: 1.13;
-  //   letter-spacing: normal;
-  // }
+  h1, h2, h3, h4, h5, h6, p {
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    // letter-spacing: -0.4px;
+  }
+
   h1 {
     font-size: 36px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.17;
-    letter-spacing: normal;
   }
   h2 {
     font-size: 26px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.23;
-    letter-spacing: normal;
   }
   h3 {
     font-size: 22px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.27;
-    letter-spacing: normal;
+  }
+  h4 {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.27;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.27;
+  }
+  h6 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.27;
   }
   
   p {
     font-size: 16px;
-    // font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
+    line-height: 2.0;
+  }
+
+  em {
+
+  }
+
+
+  ol, ul {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+  }
+  ol {
+    list-style: decimal;
+  }
+  ul {
+    list-style: disc;
+  }
+  li {
+    font-size: 16px;
+    line-height: 2.0;
+  }
+
+  pre {
+    padding: 16px 24px;
+  }
+  code {
+    font-family: 'Nanum Gothic Coding', monospace;
+    
+    margin: 0 2px;
+    border-radius: 2px;
+    color: var(--color-brand-orange);
+    line-height: inherit;
+    background-color: var(--color-ui-grayscale-gray-100);
+  }
+
+  blockQuote {
+    background-color: var(--color-ui-grayscale-gray-200);
+    border-radius: 2px;
+    padding: 16px 24px;
+    p {
+      line-height: 1.2;
+      margin-bottom: 0;
+    }
   }
 }
+

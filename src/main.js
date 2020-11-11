@@ -8,6 +8,7 @@ import 'reset-css'
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/color.scss'
 import './assets/font.css'
+import './assets/hljs.scss'
 
 Vue.config.productionTip = false
 

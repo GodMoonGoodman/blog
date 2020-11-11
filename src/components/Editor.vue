@@ -17,6 +17,13 @@
 import Vue from 'vue'
 import debounce from 'lodash/debounce'
 import marked from 'marked'
+import hljs from 'highlight.js'
+// import hljs from 'highlight.js/lib/core';
+import 'highlight.js/styles/atom-one-light.css';
+import javascript from 'highlight.js/lib/languages/javascript';
+
+hljs.registerLanguage('javascript', javascript);
+
 import '../assets/editor.scss'
 
 export default Vue.extend({
@@ -27,7 +34,14 @@ export default Vue.extend({
   },
   computed: {
     compiledMarkdown() {
-      return marked(this.value, { sanitize: true, breaks: true })
+      return marked(this.value, {
+        sanitize: true,
+        breaks: true,
+        highlight: function(code, language) {
+          const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
+          return hljs.highlight(validLanguage, code).value;
+        },
+      })
     }
   },
   methods: {
@@ -60,7 +74,7 @@ textarea {
 
 .preview {
   height: 100%;
-  background-color: var(--color-ui-grayscale-gray-100);
+  background-color: #f8f8f8;
 }
 
 textarea, .preview {
