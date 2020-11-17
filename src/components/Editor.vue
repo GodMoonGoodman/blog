@@ -2,13 +2,38 @@
   <div class="inpock-markdown-editor">
     <div class="row no-gutters">
       <div class="col">
-        <textarea :value="value" @input="update" placeholder="여기에 작성하세요 ..." />
+        <div class="editor">
+          <div class="title">
+            <input v-model.trim="title" type="text" id="input-title" placeholder="제목을 입력하세요...">
+            <input v-model.trim="subTitle" type="text" id="input-sub-title" placeholder="부제목도 입력하세요...">
+          </div>
+          <textarea :value="value" @input="update" placeholder="내용 입력..." />
+
+          <div class="control-box">
+            <div>
+              <button>나가기</button>
+            </div>
+            <div>
+              <button>임시저장</button>
+              <button>출간하기</button>
+            </div>
+          </div>
+        </div>
+        
       </div>
       <div class="col d-none d-lg-block">
-        <div class="preview marked" v-html="compiledMarkdown" />
+        <div class="preview">
+          <div class="title">
+            <h1>{{ title }}</h1>
+          </div>
+          <div class="sub-title">
+            <div>{{ subTitle }}</div>
+          </div>
+          <div class="marked" v-html="compiledMarkdown" />
+        </div>
+        
       </div>
     </div>
-    
     
   </div>
 </template>
@@ -29,6 +54,8 @@ import '../assets/editor.scss'
 export default Vue.extend({
   data() {
     return {
+      title: '',
+      subTitle: '',
       value: ''
     }
   },
@@ -62,6 +89,37 @@ export default Vue.extend({
     height: 100%;
   }
 }
+
+.editor {
+  background-color: transparent;
+  height: 100%;
+  #input-title {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.17;
+    color: var(--color-ui-primary-darkgray);
+    width: 100%;
+    border: none;
+
+    outline: none;
+
+    margin-bottom: 24px;
+  }
+
+  #input-sub-title {
+    font-size: 1em;
+    line-height: 1.56;
+    color: var(--color-ui-primary-darkgray);
+    width: 100%;
+    border: none;
+
+    outline: none;
+
+    margin-bottom: 48px;
+  }
+}
+
+
 textarea {
   width: 100%;
   outline: none;
@@ -75,9 +133,40 @@ textarea {
 .preview {
   height: 100%;
   background-color: #f8f8f8;
+
+  h1 {
+    margin-bottom: 24px;
+  }
+
+  .sub-title > div {
+    font-size: 1em;
+    line-height: 1.56;
+    color: var(--color-ui-primary-darkgray);
+    width: 100%;
+    border: none;
+
+    outline: none;
+
+    margin-bottom: 48px;
+  }
 }
 
-textarea, .preview {
+.editor, .preview {
   padding: 32px;
+}
+
+
+.control-box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50vw;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+  padding: 12px 16px;
+
+  display: flex;
+  justify-content: space-between;
 }
 </style>
