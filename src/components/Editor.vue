@@ -71,6 +71,9 @@ export default Vue.extend({
       })
     }
   },
+  mounted() {
+    
+  },
   methods: {
     // update: debounce(function (e) {
     //   this.value = e.target.value

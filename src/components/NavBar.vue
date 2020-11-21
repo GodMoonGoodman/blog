@@ -1,11 +1,23 @@
 <template>
   <nav class="navbar">
-    <div class="container">
+    <div class="container d-flex justify-content-between">
       <div class="navbar-brand">
         <router-link to="/">
         <img :src="BrandLogo" alt="">
         <span>블로그</span>
       </router-link>
+      </div>
+
+      <div class="navbar-item">
+        <div class="item">
+          <a href="https://team.inpock.co.kr" target="_blank">인포크 팀</a>
+        </div>
+        <div class="item">
+          <a href="https://inpock.co.kr" target="_blank">인포크스토어</a>
+        </div>
+        <div class="item">
+          <a href="https://link.inpock.co.kr" target="_blank">인포크링크</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -65,5 +77,28 @@ export default Vue.extend({
     }
   }
 
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  margin-left: 32px;
+  .item {
+    margin: 0 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      text-decoration: none;
+      color: var(--color-ui-grayscale-gray-700);
+      display: flex;
+      align-items: center;
+
+      transition: color 0.2s ease-in-out;
+      &:hover {
+        color: var(--color-ui-grayscale-gray-900);
+      }
+    }
+  }
 }
 </style>

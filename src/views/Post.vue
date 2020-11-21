@@ -1,23 +1,22 @@
 <template>
-  <div class="post">
-    <section class="flex-container">
-      <Editor />
-    </section>
-  </div>
+  <div></div>
 </template>
 
 <script>
 import Vue from 'vue'
-import Editor from '../components/Editor.vue'
 export default Vue.extend({
-  components: {
-    Editor
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  },
+  created() {
+    
   }
 })
 </script>
 
 <style lang='scss' scoped>
-.post, .flex-container {
-  height: 100%;
-}
+
 </style>

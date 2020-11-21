@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "deploy": "deploy-aws-s3-cloudfront --bucket blog.inpock.co.kr --delete --source ./dist"
+    "deploy": "deploy-aws-s3-cloudfront --bucket blog.inpock.co.kr --delete --source ./dist --distribution EHTDOQSI5EISZ --non-interactive"
   },
   "dependencies": {
+    "@egjs/vue-flicking": "^3.4.2",
     "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
     "highlight.js": "^10.3.2",

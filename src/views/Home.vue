@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <NavBar></NavBar>
-    <main class="container">
+    <div>
+      <Jumbotron />
+    </div>
+    <main class="container mt-5">
       <div class="row">
         <div class="col-12 col-md-6"><ArticleCard v-bind="article1" /></div>
         <div class="col-12 col-md-6"><ArticleCard v-bind="article2" /></div>
@@ -15,13 +18,16 @@
 import NavBar from '../components/NavBar.vue'
 import { article1, article2 } from '../db/article/index'
 
+import Jumbotron from '../components/Jumbotron'
+
 import ArticleCard from '../components/ArticleCard.vue'
 
 export default {
   name: 'Home',
   components: {
     NavBar,
-    ArticleCard
+    ArticleCard,
+    Jumbotron
   },
   data() {
     return {
@@ -34,6 +40,6 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  padding-top: 64px + 64px;
+  padding-top: 64px;
 }
 </style>

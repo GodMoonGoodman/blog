@@ -1,5 +1,5 @@
 <template>
-  <div class="article-card">
+  <div class="article-card" @click="routeToPost">
     <img class="thumbnail" :src="thumbnail" alt="">
     <div class="title">
       {{ title }}
@@ -37,6 +37,16 @@ export default Vue.extend({
     author: {
       type: String,
       default: ''
+    }
+  },
+  methods: {
+    routeToPost() {
+      this.$router.push({
+        name: 'post-title',
+        params: {
+          title: this.title
+        }
+      })
     }
   }
 })
