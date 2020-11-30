@@ -43,7 +43,6 @@ import Vue from 'vue'
 import debounce from 'lodash/debounce'
 import marked from 'marked'
 import hljs from 'highlight.js'
-// import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/atom-one-light.css';
 import javascript from 'highlight.js/lib/languages/javascript';
 

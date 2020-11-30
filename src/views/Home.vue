@@ -16,7 +16,7 @@
 
 <script>
 import NavBar from '../components/NavBar.vue'
-import { article1, article2 } from '../db/article/index'
+import DB_ARTICLES from '../db/article/index'
 
 import Jumbotron from '../components/Jumbotron'
 
@@ -30,6 +30,7 @@ export default {
     Jumbotron
   },
   data() {
+    const [article1, article2] = DB_ARTICLES
     return {
       article1,
       article2
