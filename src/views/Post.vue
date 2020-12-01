@@ -4,8 +4,14 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1 id="article-title" class="mt-4">{{ title }}</h1>
-          <h4 id="article-sub-title">{{ article.sub_title }}</h4>
+          <div class="markdown">
+            <section class="title-section">
+              <h1 class="title">{{ title }}</h1>
+              <div class="sub-title">{{ article.sub_title }}</div>
+            </section>
+          </div>
+          
+          
           <article>
             <div class="marked preview" v-html="compiledMarkdown" />
           </article>
@@ -62,7 +68,7 @@ export default Vue.extend({
 .post {
   padding-top: 64px + 64px;
 }
-
+/* 
 
 #article-title {
   font-size: 36px;
@@ -87,5 +93,5 @@ export default Vue.extend({
   outline: none;
 
   margin-bottom: 48px;
-}
+} */
 </style>

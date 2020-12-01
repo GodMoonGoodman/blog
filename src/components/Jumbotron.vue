@@ -32,7 +32,6 @@ export default Vue.extend({
   width: 100%;
   
   background-size: cover;
-  /* background: linear-gradient(#343434 #ffffff ) url('../assets/inpock_cover.jpeg'); */
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../assets/inpock_cover.jpeg') ;
   background-position: center;
 

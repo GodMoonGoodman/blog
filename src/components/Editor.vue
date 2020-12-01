@@ -2,11 +2,11 @@
   <div class="inpock-markdown-editor">
     <div class="row no-gutters">
       <div class="col">
-        <div class="editor">
-          <div class="title">
-            <input v-model.trim="title" type="text" id="input-title" placeholder="제목을 입력하세요...">
-            <input v-model.trim="subTitle" type="text" id="input-sub-title" placeholder="부제목도 입력하세요...">
-          </div>
+        <div class="markdown editor">
+          <section class="title-section">
+            <input v-model.trim="title" type="text" class="title" placeholder="제목을 입력하세요...">
+            <input v-model.trim="subTitle" type="text" class="sub-title" placeholder="부제목도 입력하세요...">
+          </section>
           <textarea :value="value" @input="update" placeholder="내용 입력..." />
 
           <div class="control-box">
@@ -22,13 +22,11 @@
         
       </div>
       <div class="col d-none d-lg-block">
-        <div class="preview">
-          <div class="title">
-            <h1>{{ title }}</h1>
-          </div>
-          <div class="sub-title">
-            <div>{{ subTitle }}</div>
-          </div>
+        <div class="markdown preview">
+          <section class="title-section">
+            <div class="title">{{ title }}</div>
+            <div class="sub-title">{{ subTitle }}</div>
+          </section>
           <div class="marked" v-html="compiledMarkdown" />
         </div>
         
@@ -95,30 +93,7 @@ export default Vue.extend({
 .editor {
   background-color: transparent;
   height: 100%;
-  #input-title {
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 1.17;
-    color: var(--color-ui-primary-darkgray);
-    width: 100%;
-    border: none;
 
-    outline: none;
-
-    margin-bottom: 24px;
-  }
-
-  #input-sub-title {
-    font-size: 1em;
-    line-height: 1.56;
-    color: var(--color-ui-primary-darkgray);
-    width: 100%;
-    border: none;
-
-    outline: none;
-
-    margin-bottom: 48px;
-  }
 }
 
 
@@ -146,9 +121,7 @@ textarea {
     color: var(--color-ui-primary-darkgray);
     width: 100%;
     border: none;
-
     outline: none;
-
     margin-bottom: 48px;
   }
 }
